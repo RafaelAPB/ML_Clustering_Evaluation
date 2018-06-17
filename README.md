@@ -18,7 +18,7 @@ Internal evaluation: <br>
 2. (OPTIONAL) If you wish, choose the data sets you want to use as input and place them on /input/ folder (see the notes for the input format).
 3.  Go to the directory /exe and run Evaluation.exe as administrator
 
-##Compiling the program
+## Compiling the program
 1. Clone the project
 2. Run 
 *cmake CMakeLists.txt*
