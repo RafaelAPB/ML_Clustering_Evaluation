@@ -1,8 +1,6 @@
 //
 // Created by Rafael Belchior on 08/06/2018.
 //
-int CMAKE_LEGACY_CYGWIN_WIN32 = 0;
-
 #include "Evaluation.h"
 #include <fstream>
 #include <chrono>
@@ -35,7 +33,7 @@ public:
      * */
 
         //Receive input
-        string absolutePath = "";
+        string absolutePath;
         cout << "Choose the input dataset (1-3) or your own (4)" << endl;
         cout << "1 - Iris Mock Test || few values, few classes, made up classifications" << endl;
         cout << "2 - Iris Test || sample of the DBSCAN output" << endl;
@@ -107,7 +105,7 @@ public:
         fin >> num_attributes;
         fin >> num_points;
 
-        string discovered_label = "";
+        string discovered_label;
         int cluster_id = 0;
 
         //Traverses the file and creates Points
@@ -164,12 +162,12 @@ int main(int argc, char **argv) {
     int beta = 0;
     int num_points = 0;
     //Not needed, because the number of attributes can be obtained from the number of coordinates of a certain Point
-    int num_attributes = 0;
+    //int num_attributes = 0;
     int num_classes = 0;
 
     InputParser InputParser;
 
-    num_attributes = InputParser.getNum_attributes();
+    //num_attributes = InputParser.getNum_attributes();
     num_classes = InputParser.getNum_classes();
     num_points = InputParser.getNum_points();
     //Normalizing techniques could be applied
@@ -475,8 +473,8 @@ double calculateCalinskiHarabaszIndex(vector<Point> &points, vector<Cluster> &cl
     double b = 0.0, w = 0.0;
 
     for (Cluster c: clusters) {
-        w = c.whitinClusterVariance();
-        b = c.beetwenClusterVariance(points);
+        w = c.withinClusterVariance();
+        b = c.betweenClusterVariance(points);
 
         //CH index can show the optimal number of clusters when doing k-means or hierarchical clustering; you would choose the number of clusters k that maximize CH(k). As k increases, B(k) increases, and W(k) decreases.
         //As k increases, B(k) increases, and W(k) decreases.

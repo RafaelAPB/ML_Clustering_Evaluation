@@ -18,7 +18,7 @@ class Point {
     vector<double> coordinates;
     string discovered_label;
     int cluster_id;
-    int id; //needed for output purposes only
+    int id;
 
 public:
 

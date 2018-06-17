@@ -34,9 +34,9 @@ public:
 
     double avgDistToCentroid();
 
-    double whitinClusterVariance();
+    double withinClusterVariance();
 
-    double beetwenClusterVariance(vector<Point> &points);
+    double betweenClusterVariance(vector<Point> &points);
 
     double euclideanDistance(vector<double> a, vector<double> b);
 };

@@ -24,7 +24,7 @@ Internal evaluation: <br>
 *cmake CMakeLists.txt*
 
 ## Notes
-* The input of the program, for a dataset with numerical data and n dimensions is in the following form: <br><br> 
+* The input of the program, for a data set with numerical data and n dimensions is in the following form: <br><br> 
 number_of_classes number_of_attributes number_of_points
 cluster1_id point1_label coordinate_1 coordinate_2 coordinate_n
 cluster1_id point2_label coordinate_1 coordinate_2 coordinate_n
